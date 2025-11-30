@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Button } from '../components/ui/Button';
 
@@ -6,7 +6,8 @@ export const AuthPage: React.FC = () => {
   const { loading, isTelegramUser, loginAsGuest } = useAuth();
 
   const handleOpenTelegram = () => {
-    window.location.href = "https://t.me/YOUR_BOT_NAME"; // Replace with your bot link
+    // Replace with your actual bot username or link
+    window.location.href = "https://t.me/YOUR_BOT_NAME"; 
   };
 
   return (
@@ -32,7 +33,7 @@ export const AuthPage: React.FC = () => {
                         Welcome! This app is optimized for Telegram.
                     </p>
                     
-                    <Button onClick={handleOpenTelegram} className="mb-4">
+                    <Button onClick={handleOpenTelegram} className="mb-4" fullWidth>
                         Open in Telegram
                     </Button>
                     
@@ -42,7 +43,7 @@ export const AuthPage: React.FC = () => {
                         <div className="h-px bg-gray-700 w-full"></div>
                     </div>
 
-                    <Button variant="secondary" onClick={loginAsGuest}>
+                    <Button variant="secondary" onClick={loginAsGuest} fullWidth>
                         Continue as Guest
                     </Button>
                 </>
