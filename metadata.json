@@ -1,0 +1,5 @@
+{
+  "name": "CashReward App",
+  "description": "A rewards application where users earn coins by watching ads, completing tasks, and referring friends, with withdrawal functionality via Firebase.",
+  "requestFramePermissions": []
+}
